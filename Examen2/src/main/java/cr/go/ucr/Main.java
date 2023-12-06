@@ -16,7 +16,7 @@ public class Main {
        context = new OperacionAritmetica( new Multiplicacion() );
        int multip = context.procesar(5,4);
 	   context = new OperacionAritmetica( new Division() );
-       int divis = context.procesar(5,4);
+       int divis = context.procesar(5,0);
        
        
        System.out.println("Suma: " + suma );

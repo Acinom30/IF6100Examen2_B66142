@@ -40,10 +40,17 @@ class Test {
 	//Método que prueba que la resta no se puede llevar a cabo si el primer dígito es menor
 	//que el segundo
 	@org.junit.jupiter.api.Test
-    public void testRestaNegativa() {
+    public void testRestaDigitMenor() {
         OperacionAritmetica operacion = new OperacionAritmetica(new Resta());
         assertNotEquals(-16, operacion.procesar(4, 20));
     }
+	
+	//Método que prueba que la resta no se puede llevar a cabo si hay un número negativo
+		@org.junit.jupiter.api.Test
+	    public void testRestaNegativa() {
+	        OperacionAritmetica operacion = new OperacionAritmetica(new Resta());
+	        assertNotEquals(16, operacion.procesar(20, -4));
+	    }
 
 	//Método que muestra la multiplicación
 	@org.junit.jupiter.api.Test
@@ -58,6 +65,13 @@ class Test {
         OperacionAritmetica operacion = new OperacionAritmetica(new Multiplicacion());
         assertEquals(6, operacion.procesar(3, 2));
     }
+	
+	//Método que muestra que no se puede llevar a cabo la multiplicación con dígito negativo
+		@org.junit.jupiter.api.Test
+	    public void testMultiplicacionNegativa() {
+	        OperacionAritmetica operacion = new OperacionAritmetica(new Multiplicacion());
+	        assertNotEquals(-6, operacion.procesar(3, -2));
+	    }
 
 	//Método que muestra la división
 	@org.junit.jupiter.api.Test
@@ -74,4 +88,10 @@ class Test {
         assertNotEquals(1, operacion.procesar(5, 0));
     }
 
+	//Método que muestra que la división no se lleva a cabo si hay un dígito negativo
+	@org.junit.jupiter.api.Test
+    public void testDivisionNegativa() {
+        OperacionAritmetica operacion = new OperacionAritmetica(new Division());
+        assertNotEquals(-2, operacion.procesar(10, -2));
+    }
 }
