@@ -12,11 +12,11 @@ public class Main {
        context = new OperacionAritmetica( new Sumar() );
        int suma = context.procesar(5,10);
        context = new OperacionAritmetica( new Resta() );
-       int resta = context.procesar(20,21);
+       int resta = context.procesar(20,4);
        context = new OperacionAritmetica( new Multiplicacion() );
        int multip = context.procesar(5,4);
 	   context = new OperacionAritmetica( new Division() );
-       int divis = context.procesar(5,0);
+       int divis = context.procesar(5,4);
        
        
        System.out.println("Suma: " + suma );
