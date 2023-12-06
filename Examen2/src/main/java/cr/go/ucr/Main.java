@@ -15,19 +15,16 @@ public class Main {
        int resta = context.procesar(20,4);
        context = new OperacionAritmetica( new Multiplicacion() );
        int multip = context.procesar(5,4);
-       context = new OperacionAritmetica( new Division() );
+	   context = new OperacionAritmetica( new Division() );
        int divis = context.procesar(5,4);
        
-
        
        System.out.println("Suma: " + suma );
        System.out.println("Resta: " + resta );
        System.out.println("Multiplicación: " + multip );
-       System.out.println("División: " + divis );
+	   System.out.println("División: " + divis );
    
        
 	}
-
-}
 
 }
